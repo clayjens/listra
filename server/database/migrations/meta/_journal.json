@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1733499681175,
+      "tag": "0000_lyrical_sentinels",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1733500007907,
+      "tag": "0001_boring_machine_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1733500440445,
+      "tag": "0002_fluffy_blonde_phantom",
+      "breakpoints": true
+    }
+  ]
+}
