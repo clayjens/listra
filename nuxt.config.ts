@@ -26,9 +26,7 @@ export default defineNuxtConfig({
   // https://eslint.nuxt.com
   eslint: {
     config: {
-      stylistic: {
-        quotes: 'single',
-      },
+      standalone: true,
     },
   },
 })

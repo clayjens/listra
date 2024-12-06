@@ -1,8 +1,9 @@
 {
   "name": "listra",
-  "author": "Clayton Jensen <clayton@yourmommas.house>",
-  "private": true,
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "author": "Clayton Jensen <clayton@yourmommas.house>",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,7 +11,9 @@
     "preview": "npx nuxthub preview",
     "deploy": "npx nuxthub deploy",
     "postinstall": "nuxt prepare",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:inspect": "npx @eslint/config-inspector"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.6.1",
@@ -20,11 +23,20 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
     "@nuxt/eslint-config": "^0.6.1",
     "eslint": "^9.14.0",
+    "eslint-plugin-format": "^0.1.2",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.6.3",
     "vue-tsc": "^2.1.10",
     "wrangler": "^3.84.1"
   },
-  "packageManager": "pnpm@9.12.3"
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
 }
